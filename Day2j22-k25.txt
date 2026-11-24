@@ -107,45 +107,48 @@ task4: DESING IMPLEMENTATION AND CONFIGURATION:
 @D1:
 config t
 vlan 3
-name CHEVRONINC
+name ALORICADAVAO.com
 vlan 4
-name PETRONCORP
+name ALORICACEBU.com
 vlan 5
-name EMBAUSA.ORG
+name ALORICABALER.com
 vlan 6
-name GOODYEARINC
+name ALORICAMANILA.com
 Interface vlan 3
- desc SVIFORCHEVRON
+ desc ALORICADAVAO.com
  no shut
  ip add 10.0.32.1 255.255.224.0
 Interface vlan 4
- desc SVIFORPETRON
+ desc ALORICACEBU.com
  no shut
  ip add 10.0.8.1 255.255.248.0
 Interface vlan 5
- desc SVIFORUSAEMBA
+ desc ALORICABALER.com
  no shut
  ip add 10.0.0.129 255.255.255.128
 Interface vlan 6
- desc SVIFORGOODYEAR
+ desc ALORICAMANILA.com
  no shut
  ip add 10.0.16.1 255.255.240.0
-ip dhcp excluded-add 10.0.32.1 10.0.32.100
-ip dhcp excluded-add 10.0.8.1 10.0.8.100
-ip dhcp excluded-add 10.0.0.129 10.0.0.139
 ip dhcp excluded-add 10.0.16.1 10.0.16.100
-ip dhcp pool CHEVRONINC
- network 10.0.32.0 255.255.224.0
- default-router 10.0.32.1
-ip dhcp pool pETRONINC
- network 10.0.8.0 255.255.248.0
- default-router 10.0.8.1
-ip dhcp pool USAEMBASY
- network 10.0.0.128 255.255.255.128
- default-router 10.0.0.129
-ip dhcp pool GOODYEAR
+ip dhcp excluded-add 10.0.2.1 10.0.2.50
+ip dhcp excluded-add 10.0.0.33 10.0.0.36
+ip dhcp excluded-add 10.0.4.1 10.0.4.100
+ip dhcp pool ALORICADAVAO.com
  network 10.0.16.0 255.255.240.0
- default-router 10.0.16.1
+ default-router 10.0.32.1
+domain-name ALORICADAVAO.com
+ip dhcp pool ALORICACEBU.com
+ network 10.0.8.1 255.255.248.0
+ default-router 10.0.8.1
+domain-main ALORICACEBU.com
+ip dhcp pool ALORICABALER.com
+ network 10.0.0.32 255.255.255.224
+ default-router 10.0.0.129
+ip dhcp pool ALORICAMANILA.com
+ network 10.0.4.0 255.255.252.0
+ default-router 10.0.4.1
+domain-main ALORICAMANILA.com
 end
 @A1:
 CONFIG T
